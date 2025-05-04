@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Инициализация Sortable для всех списков
     const menuLists = document.querySelectorAll('.menu-list, .children');
     
     menuLists.forEach(list => {
@@ -27,8 +26,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     order: index + 1,
                     parent_id: null
                 });
-                
-                // Обрабатываем дочерние элементы
                 const childrenContainer = item.querySelector('.children');
                 if (childrenContainer) {
                     const children = childrenContainer.querySelectorAll('.menu-item');
@@ -42,8 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-        
-        // Отправка данных на сервер
         fetch('/index.php?action=update-order', {
             method: 'POST',
             headers: {
