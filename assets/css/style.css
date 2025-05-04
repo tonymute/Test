@@ -1,0 +1,17 @@
+.menu-item {
+    cursor: click;
+    margin-bottom: 5px;
+}
+
+.children {
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.section-title {
+    margin-top: 30px;
+    font-weight: bold;
+    background: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
